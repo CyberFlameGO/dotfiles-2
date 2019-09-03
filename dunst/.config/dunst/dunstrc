@@ -61,7 +61,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
     frame_color = "#8fadcc"
@@ -87,7 +87,8 @@
 
     #font = DejaVu Sans 12
     #font = Iosevka Term Medium 13
-    font = Exo2 SemiBold 16
+    #font = Exo2 SemiBold 16
+    font = San Francisco Display Regular 14
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -181,10 +182,10 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/rofi -show run -p dunst:
+    #dmenu = /usr/bin/rofi -show run -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/google-chrome
+    browser = /usr/bin/firefox-developer-edition
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -249,14 +250,14 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#081021"
     foreground = "#c7c7c7"
-    timeout = 10
+    timeout = 4
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
     background = "#081021"
     foreground = "#c7c7c7"
-    timeout = 10
+    timeout = 4
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
