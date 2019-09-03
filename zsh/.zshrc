@@ -8,8 +8,11 @@ alias gotop="gotop -c solarized"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:$HOME/.dotnet/tools
+export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
+
 export LIBCLANG_PATH=$(llvm-config --prefix)/lib64
 
 [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
