@@ -7,9 +7,9 @@ alias vim=nvim
 alias gotop="gotop -c solarized"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/jason/.oh-my-zsh"
-export PATH=$PATH:/home/jason/bin
-export PATH=$PATH:/home/jason/.dotnet/tools
+export ZSH="$HOME/.oh-my-zsh"
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.dotnet/tools
 export LIBCLANG_PATH=$(llvm-config --prefix)/lib64
 
 [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
