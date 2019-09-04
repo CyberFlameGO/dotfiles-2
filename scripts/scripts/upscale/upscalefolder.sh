@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd ~/scripts/upscale
 
 mkdir ./i

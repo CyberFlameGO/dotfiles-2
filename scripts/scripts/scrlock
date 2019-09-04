@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 pngfile="/tmp/sclock.png"
 bmpfile="/tmp/sclock.bmp"
