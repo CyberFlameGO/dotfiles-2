@@ -1,0 +1,1 @@
+killall -q compton; compton -b; echo " --experimental-backends"

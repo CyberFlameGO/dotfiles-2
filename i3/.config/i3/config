@@ -35,7 +35,7 @@ exec --no-startup-id nm-applet
 exec xrandr --output DP-0 --rate 165
 
 #Start the compositor
-exec_always --no-startup-id "~/bin/startcompton"
+exec_always --no-startup-id "~/scripts/startcompton"
 
 # Notification daemon
 exec_always --no-startup-id "killall dunst; dunst"
@@ -89,7 +89,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+w kill
 
 # Lock screen mod+L
-bindsym $mod+l exec ~/bin/scrlock
+bindsym $mod+l exec ~/scripts/scrlock
 
 # open launcher
 bindsym $mod+d exec rofi -show drun

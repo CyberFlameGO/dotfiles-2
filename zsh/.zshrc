@@ -1,10 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+alias gotop="gotop -c solarized"
 alias neofetch="neofetch --source ~/Pictures/arch.png"
+
 alias cfg="cd ~/.config"
 alias vim=nvim
-alias gotop="gotop -c solarized"
+alias ddstatus="watch -n1 'sudo kill -USR1 $(pgrep ^dd)'"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"

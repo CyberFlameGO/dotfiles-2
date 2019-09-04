@@ -1,8 +1,8 @@
 [module/compton]
 type = custom/script
-exec = ~/scripts/isrunning-compton.sh
+exec = ~/scripts/comptond.sh
 interval = 1
-click-left = ~/scripts/isrunning-compton.sh --toggle
+click-left = ~/scripts/comptond.sh --toggle
 
 [module/xwindow]
 type = internal/xwindow
@@ -194,7 +194,7 @@ label-disconnected = disconnected
 
 [module/np]
 type = custom/script
-exec = "~/bin/nowplaying"
+exec = "~/scripts/nowplaying"
 interval = 1
 
 [module/date]

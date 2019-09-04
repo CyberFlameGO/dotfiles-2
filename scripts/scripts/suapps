@@ -1,0 +1,12 @@
+#! /bin/bash
+
+spotify &
+firefox-developer-edition &
+alacritty &
+
+sleep 1
+
+wmctrl -r Spotify -t 4
+wmctrl -r Firefox -t 1
+
+exit

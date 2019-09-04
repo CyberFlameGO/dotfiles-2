@@ -1,0 +1,19 @@
+#!/bin/bash
+ps -C spotify >/dev/null && \
+  status=$(playerctl -p spotify status) ||\
+  status="no"
+if [[ "$status" == "Playing" ]]; then
+  artist=$(playerctl -p spotify metadata artist)
+  album=$(playerctl -p spotify metadata album)
+  title=$(playerctl -p spotify metadata title)
+  length=$(playerctl -p spotify metadata mpris:length | sed 's/.\{6\}$//')
+fi
+if [[ "$status" == "Playing" ]] 
+  then status="" && echo "$status $artist - $album - $title"
+else
+  status="" && echo "$status"
+fi 
+
+echo "$status $artist - $album - $title"
+
+~/scripts/sanebar
