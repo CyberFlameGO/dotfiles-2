@@ -1,0 +1,19 @@
+# /dev/sda3
+UUID=cf7a29ef-aaa3-43b4-b0ac-008ab0ced7fc	/         	ext4      	rw,relatime	0 1
+
+# /dev/sda1
+UUID=56B0-35B4      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sda2
+UUID=3c7bbfee-bca4-4282-8197-9ad2895ce517	none      	swap      	defaults  	0 0
+
+#shared folder hdd
+HDD /home/vm/HDD vboxsf uid=1000,gid=1000 0 0
+#shared folder dl
+DL /home/vm/HostDL vboxsf uid=1000,gid=1000 0 0
+#shared folder nvme
+NVME /home/vm/NVMe vboxsf uid=1000,gid=1000 0 0
+#shared folder vc1
+veracrypt1 /home/vm/vc1 vboxsf uid=1000,gid=1000 0 0
+#shared folder vc2
+veracrypt2 /home/vm/vc2 vboxsf uid=1000,gid=1000 0 0
