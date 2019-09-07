@@ -17,7 +17,7 @@ if [[ $class = "csgo_linux64" ]]; then
 		echo ""
 	  else
 	    if [ "$(pgrep -x csgo_linux64)" ]; then
-	  	  ~/bin/startcompton
+	  	  ~/scripts/startcompton
 		fi
 	fi
 fi

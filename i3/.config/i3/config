@@ -40,7 +40,7 @@ exec_always --no-startup-id "~/scripts/startcompton"
 # Notification daemon
 exec_always --no-startup-id "killall dunst; dunst"
 
-#Set the wallpaper using feh
+#Set wp and kb color
 exec_always ~/scripts/wp
 
 #polybar
