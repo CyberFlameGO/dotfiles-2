@@ -30,6 +30,9 @@ border_radius 8
 
 #Startup scripts
 
+# Start clipster clipboard manager daemon
+exec_always --no-startup-id "killall clipster; clipster -d"
+
 # NetworkManager Applet
 exec --no-startup-id nm-applet
 
@@ -41,6 +44,9 @@ exec_always --no-startup-id "~/scripts/startcompton"
 
 # Notification daemon
 exec_always --no-startup-id "killall dunst; dunst"
+
+#auth agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 #Set wp and kb color
 exec_always ~/scripts/wp
@@ -71,6 +77,9 @@ client.background       #ffffff
 
 # Mod key
 set $mod Mod4
+
+# clipboard manager
+bindsym $mod+c exec clipster -sp
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
