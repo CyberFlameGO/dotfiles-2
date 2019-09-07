@@ -1,3 +1,4 @@
 #!/bin/bash
 
-killall -q compton; $HOME/Documents/compton/build/src/compton -b; echo " --experimental-backends"
+#killall -q compton; $HOME/Documents/compton/build/src/compton -b; echo " --experimental-backends"
+killall -q compton; compton -b --blur-method kawase --blur-strength 8
