@@ -16,7 +16,7 @@ export LIBCLANG_PATH=$(llvm-config --prefix)/lib64
 [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 
 #oh my zsh theme
-ZSH_THEME="gnzh"
+ZSH_THEME="gnzhc"
 
 ZSH_DISABLE_COMPFIX="true"
 
