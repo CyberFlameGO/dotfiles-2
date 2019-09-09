@@ -1,4 +1,3 @@
-alias gotop="gotop -c solarized"
 alias neofetch="neofetch --source ~/Pictures/arch.png"
 
 alias cfg="cd ~/.config"

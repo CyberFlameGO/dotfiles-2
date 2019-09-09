@@ -31,8 +31,8 @@ font-4 = San Francisco Display:style=Bold:pixelsize=15;1
 ;modules
 modules-left = powermenu bspwm i3 np
 modules-center = xwindow
-modules-right = compton xbacklight pulseaudio eth filesystem memory cpu temperature battery date
-
+;modules-right = compton xbacklight pulseaudio eth filesystem memory cpu temperature battery date
+modules-right = compton pulseaudio eth date
 
 enable-ipc = true
 

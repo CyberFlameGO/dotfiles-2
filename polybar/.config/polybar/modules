@@ -181,7 +181,7 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-underline = #174fca
+;format-connected-underline = #174fca
 format-connected-prefix = "%{F#174fca} %{F-} "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %{F#ff742e}%{F-} %downspeed%  %{F#2aa3ff}%{F-} %upspeed%
@@ -209,7 +209,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #00aaff
+;format-underline = #00aaff
 
 label = %{F#00aaff}%{F-} %date%  %{F#00aaff}%{F-} %time%
 
