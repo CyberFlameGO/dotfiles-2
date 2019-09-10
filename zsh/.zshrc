@@ -1,5 +1,6 @@
 alias neofetch="neofetch --source ~/Pictures/arch.png"
 
+alias sd="sudo systemctl"
 alias cfg="cd ~/.config"
 alias vim=nvim
 alias ddstatus="watch -n1 'sudo kill -USR1 $(pgrep ^dd)'"
@@ -12,6 +13,7 @@ export PATH=$PATH:$HOME/.dotnet/tools
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 
 export LIBCLANG_PATH=$(llvm-config --prefix)/lib64
+export GOPATH=$HOME/.go
 
 [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 
