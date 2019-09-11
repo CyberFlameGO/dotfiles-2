@@ -176,18 +176,18 @@ mode "resize" {
 }
 
 #Change gaps
-set $mode_gaps Gaps: +|-|0 (inner), Shift + +|-|0 (outer)
+set $mode_gaps Gaps: +|-|0 (outer), Shift + +|-|0 (inner)
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
 
-        bindsym Shift+plus  gaps outer current plus 5
-        bindsym Shift+minus gaps outer current minus 5
-        bindsym Shift+0     gaps outer current set 0
+        bindsym Shift+plus  gaps inner current plus 5
+        bindsym Shift+minus gaps inner current minus 5
+        bindsym Shift+0     gaps inner current set 0
 }
