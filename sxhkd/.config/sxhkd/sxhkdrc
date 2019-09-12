@@ -1,0 +1,64 @@
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+
+
+#
+# launch programs or run scripts
+#
+
+# terminal emulator
+super + Return
+	st
+#	alacritty
+
+# program launcher
+super + d
+	rofi -show drun
+
+# lock screen
+super + l
+	~/scripts/scrlock
+
+# open clipboard history
+super + c
+	xfce4-popup-clipman
+
+
+
+#
+# i3 keybinds
+#
+
+# volume bind
+{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
+	amixer -q -D pulse sset Master {5%+,5%-,toggle}
+
+# kill focused window
+super + shift + w
+	i3-msg kill
+
+# toggle fullscreen
+super + f
+	i3-msg fullscreen toggle
+
+# change focused window
+super + {Left, Down, Up, Right}
+	i3-msg focus {left,down,up,right}
+
+# set focused window to be split v/h
+super + {v, h}
+	i3-msg split {v, h}
+
+# move focused window
+super + shift + {Left, Down, Up, Right}
+	i3-msg move {left,down,up,right}
+
+# switch workspace
+super + {1-9, 10}
+	i3-msg workspace {1-9, 10}
+
+# move container to workspace
+super + {_,shift + }{1-9,0}
+	i3-msg {_,move container to }workspace number {1-9,10}

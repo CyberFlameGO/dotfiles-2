@@ -31,6 +31,9 @@ gaps outer 50
 # sxhkd
 exec_always "killall sxhkd; sxhkd"
 
+# clipman
+exec_always "xfce4-clipman &"
+
 # NetworkManager Applet
 exec --no-startup-id nm-applet
 
@@ -88,18 +91,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# kill focused window
-bindsym $mod+Shift+w kill
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
 #enter rezise mode
 bindsym $mod+r mode "resize"
 
@@ -108,11 +99,6 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
-# Volume binds
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks 
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
 
 # resize bindings
 mode "resize" {
