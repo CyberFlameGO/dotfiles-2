@@ -33,7 +33,7 @@ super + c
 
 # volume bind
 {XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
-	amixer -q -D pulse sset Master {5%+,5%-,toggle}
+	amixer -q -D pulse sset Master {2%+,2%-,toggle}
 
 # kill focused window
 super + shift + w

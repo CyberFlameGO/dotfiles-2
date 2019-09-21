@@ -17,8 +17,8 @@ set $ws10 "10"
 
 # Gaps settings
 for_window [class="^.*"] border pixel 0
-gaps inner 32
-gaps outer 50 
+gaps inner 22
+gaps outer 24
 #smart_gaps on
 #smart_borders on
 
