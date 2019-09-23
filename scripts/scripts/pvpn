@@ -1,0 +1,11 @@
+#!/bin/sh
+
+s=$(sudo pvpn --status | sed 's/.*: //')
+s0=$(echo $s | awk '{print $1}')
+s1=$(echo $s | awk '{print $4}')
+
+if [ "$s0" = "Running" ]
+then
+	echo "%{F#870063}  %{F-}$s1"
+fi
+echo " "

@@ -17,6 +17,10 @@ super + Return
 super + d
 	rofi -show drun
 
+# web browser
+super + w
+	brave-nightly
+
 # lock screen
 super + l
 	~/scripts/scrlock

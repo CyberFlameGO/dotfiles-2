@@ -1,3 +1,9 @@
+[module/pvpn]
+type = custom/script
+exec = ~/scripts/pvpn
+interval = 15
+click-left = notify-send "ProtonVPN Status" "$(sudo pvpn --status)"
+
 [module/compton]
 type = custom/script
 exec = ~/scripts/comptond.sh
