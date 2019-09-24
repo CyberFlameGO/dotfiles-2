@@ -55,6 +55,6 @@ else
 fi
 
 # Compilation flags
-export ARCHFLAGS="-arch x87_64"
+export ARCHFLAGS="-arch x86_64"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
