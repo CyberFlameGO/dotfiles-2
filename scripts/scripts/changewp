@@ -1,14 +1,16 @@
 #!/bin/sh
 
 wp="$HOME/Pictures/wp/$(ls $HOME/Pictures/wp | dmenu -p "Which wallpaper to preview/set? (~/Pictures/wp/)")"
-feh --bg-fill $wp
-
-keep="$(echo "no\nyes" | dmenu -p "Keep this wallpaper?")"
-
-if [ "$keep" = "yes" ]
+if [ "${#wp}" -gt 25 ]
 then
-	rm $HOME/dotfiles/wallpaper/.config/wp
-	cp $wp $HOME/dotfiles/wallpaper/.config/wp
-fi
+	feh --bg-fill $wp
+	keep="$(echo "no\nyes" | dmenu -p "Keep this wallpaper?")"
 
-$HOME/scripts/wp
+	if [ "$keep" = "yes" ]
+	then
+		rm $HOME/dotfiles/wallpaper/.config/wp
+		cp $wp $HOME/dotfiles/wallpaper/.config/wp
+	fi
+
+	$HOME/scripts/wp
+fi

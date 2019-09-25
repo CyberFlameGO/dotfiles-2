@@ -57,4 +57,5 @@ fi
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
+# Syntax highlighting. Requires zsh-syntax-highlighting from community repo in arch
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

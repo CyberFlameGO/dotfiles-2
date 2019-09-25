@@ -25,6 +25,10 @@ super + w
 super + l
 	~/scripts/scrlock
 
+# change wallpaper
+super + shift + l
+	~/scripts/changewp
+
 # open clipboard history
 super + c
 	xfce4-popup-clipman
