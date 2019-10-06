@@ -1,5 +1,4 @@
-alias neofetch="neofetch --source ~/Pictures/arch.png"
-
+alias cdgf="cd ~/Documents/GDrive/groff"
 alias sd="sudo systemctl"
 alias cfg="cd ~/.config"
 alias vim=nvim

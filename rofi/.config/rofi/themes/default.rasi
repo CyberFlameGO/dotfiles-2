@@ -11,7 +11,7 @@ configuration {
     background-color: @xbg;
     border-color: #00000000;
     text-color: @xfg;
-    font: "SF Pro Display 15";
+    font: "San Francisco Display Semibold 17";
 }
 
 #window {
