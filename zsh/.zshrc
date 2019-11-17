@@ -3,6 +3,11 @@ alias sd="sudo systemctl"
 alias cfg="cd ~/.config"
 alias vim=nvim
 alias ddstatus="watch -n1 'sudo kill -USR1 $(pgrep ^dd)'"
+alias p2p="sudo pvpn -p2p"
+alias dp="sudo pvpn -d"
+
+alias vcf="veracrypt --auto-mount=favorites"
+alias vcd="veracrypt -d"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
