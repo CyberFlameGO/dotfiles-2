@@ -1,7 +1,10 @@
 #!/bin/sh
 
-#Set wallpaper with feh
-feh --bg-fill ~/.config/wp 
-
 #Set keyboard color
 sudo g810-led -p /etc/g810-led/samples/all_blue_fxl_breathing_red
+
+#Set wallpaper with feh
+#feh --bg-fill ~/.config/wp
+killall dynpaper
+sleep 1
+dynpaper -f ~/Pictures/wp/mojave_dynamic/mojave_dynamic_{}.jpeg -e feh
