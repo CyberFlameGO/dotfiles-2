@@ -1,0 +1,16 @@
+;background = #cc000000
+;background-alt = #648ea1
+;foreground = ffffff
+;;foreground = #003399
+;foreground-alt = #0099cc
+;primary = #66ccff
+;secondary = #0b58bd
+;alert = #bd2c40
+
+background = #ccfafafa
+background-alt = #c9c6c6
+foreground = #383a42
+foreground-alt = #cc484848
+primary = #66ccff
+secondary = #0b58bd
+alert = #bd2c40

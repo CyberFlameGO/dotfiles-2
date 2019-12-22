@@ -1,0 +1,276 @@
+[module/pvpn]
+type = custom/script
+exec = ~/scripts/pvpn
+interval = 15
+click-left = notify-send "ProtonVPN Status" "$(sudo pvpn --status)"
+
+[module/compton]
+type = custom/script
+exec = ~/scripts/comptond.sh
+interval = 1
+click-left = ~/scripts/comptond.sh --toggle
+
+[module/xwindow]
+type = internal/xwindow
+label = [%title%]
+;label-maxlen = 100
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
+
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+[module/temperature]
+type = internal/temperature
+format = <label>
+interval = 0.5
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
+base-temperature = 25
+thermal-zone = 0
+warn-temperature = 75
+label = %{F#cc8c1c}%{F-} %temperature-c%
+format-underline = #cc8c1c
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+label-mounted-underline = #ffffa2
+label-mounted = %{F#ffffa2}%{F-} %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/bspwm]
+type = internal/bspwm
+
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;4
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;7
+ws-icon-7 = VIII;8
+ws-icon-8 = IX;
+ws-icon-9 = X;
+ws-icon-default = 
+
+format = <label-state> <label-mode>
+
+label-focused = %{T5}%icon%%{T-}
+label-focused-background = 
+label-focused-underline= ffffff
+label-focused-padding = 2
+
+label-occupied = %{T5}%icon%%{T-}
+label-occupied-padding = 2
+
+label-urgent = %{T5}%icon%!%{T-}
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = %{T5}%icon%%{T-}
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background =
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label>
+label = %{F#f5f747}%{F-}
+
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "%{F#ff5555}%{F-} "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #ff5555
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "%{F#4bffdc}%{F-} "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #4bffdc
+label = %percentage_used%%
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal>
+;format-connected-underline = ${colors.foreground-alt}
+label-connected = 
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/eth]
+type = internal/network
+interface = enp0s31f6
+interval = 3.0
+
+;format-connected-underline = #174fca
+format-connected-prefix = "%{F#174fca} %{F-} "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %{F#ff742e}%{F-} %downspeed%  %{F#2aa3ff}%{F-} %upspeed%
+
+;format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/np]
+type = custom/script
+exec = "~/scripts/nowplaying"
+interval = 1
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = %a %b %d, %Y
+date-alt = " %Y-%m-%d"
+
+time = %l:%M:%S
+time-alt = %H:%M:%S
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+;format-underline = #00aaff
+
+label = %{F#00aaff}%{F-} %date%  %{F#00aaff}%{F-} %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+label-volume = %{F#484848}%{F-} %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted = 🔇 muted
+label-muted-foreground = #666
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = %{F#00aaff}%{F-}
+label-open-foreground = ${colors.foreground}
+label-close =  cancel
+label-close-foreground = ${colors.foreground}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0

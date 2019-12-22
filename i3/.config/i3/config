@@ -50,7 +50,7 @@ exec_always --no-startup-id "killall dunst; dunst"
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 #Set wp and kb color
-exec_always ~/scripts/wp
+exec_always --no-startup-id ~/scripts/wp
 
 #polybar
 exec_always --no-startup-id ~/scripts/startbar

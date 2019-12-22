@@ -1,0 +1,84 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;==========================================================
+
+;Modules
+include-file = $XDG_CONFIG_HOME/polybar/modules
+
+[colors]
+include-file = $XDG_CONFIG_HOME/polybar/colors
+
+[bar/bar]
+
+;Fonts
+font-0 = San Francisco Display:style=Bold:pixelsize=13;1
+
+font-1 = unifont:fontformat=truetype:size=12;1
+font-2 = siji:pixelsize=15;1
+font-3 = FontAwesome:style=Regular:pixelsize=15;1
+font-4 = San Francisco Display:style=Bold:pixelsize=15;1
+
+
+;modules
+modules-left = powermenu bspwm i3 np
+modules-center = xwindow
+;modules-right = compton xbacklight pulseaudio eth filesystem memory cpu temperature battery date
+modules-right = pvpn compton pulseaudio eth date
+
+enable-ipc = true
+
+;monitor = ${env:MONITOR:DP-0}
+width = 100%
+;height = 27
+height = 32
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+;background = #00ffffff
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #ffffff
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+;Tray
+tray-position = right
+tray-padding = 2
+;tray-background = #000000
+
+;override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
