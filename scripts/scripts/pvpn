@@ -1,6 +1,6 @@
 #!/bin/sh
 
-s=$(sudo pvpn --status | sed 's/.*: //')
+s=$(pvpn --status | sed 's/.*: //')
 s0=$(echo $s | awk '{print $1}')
 s1=$(echo $s | awk '{print $4}')
 

@@ -17,10 +17,17 @@ set $ws10 "10"
 
 # Gaps settings
 for_window [class="^.*"] border pixel 0
-gaps inner 22
-gaps outer 24
+gaps inner 10
+gaps outer 0
 #smart_gaps on
 #smart_borders on
+
+
+
+
+
+#notepadqq rules
+for_window [class="Notepadqq" title="Search"] floating enable
 
 
 
@@ -29,16 +36,16 @@ gaps outer 24
 #Startup scripts
 
 # sxhkd
-exec_always "killall sxhkd; sxhkd"
+exec_always --no-startup-id "killall sxhkd; sxhkd"
 
 # clipman
-exec_always "xfce4-clipman &"
+exec_always --no-startup-id "xfce4-clipman &"
 
 # NetworkManager Applet
 exec --no-startup-id nm-applet
 
 #Set refresh rate
-exec xrandr --output DP-0 --rate 165
+exec --no-startup-id xrandr --output DP-0 --rate 165
 
 #Start the compositor
 exec_always --no-startup-id "~/scripts/startcompton"
@@ -47,7 +54,7 @@ exec_always --no-startup-id "~/scripts/startcompton"
 exec_always --no-startup-id "killall dunst; dunst"
 
 #auth agent
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 #Set wp and kb color
 exec_always --no-startup-id ~/scripts/wp

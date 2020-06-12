@@ -14,4 +14,5 @@ fi
 #feh --bg-fill ~/.config/wp
 killall dynpaper
 sleep 1
-dynpaper -f ~/Pictures/wp/mojave_dynamic/mojave_dynamic_{}.jpeg -e feh
+#dynpaper -f ~/Pictures/wp/mojave_dynamic/mojave_dynamic_{}.jpeg -e feh -d 17:30 -r 06:50
+dynpaper -g 6,9 -f ~/Pictures/wp/catalina_dynamic/Catalina{}.jpg -e feh -d 17:30 -r 06:50
