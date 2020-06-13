@@ -2,14 +2,14 @@
 
 case "$1" in
     --toggle)
-        if [ "$(pgrep -x compton)" ]; then
-            pkill compton
+        if [ "$(pgrep -x picom)" ]; then
+            pkill picom
         else
             ~/scripts/startcompton
         fi
         ;;
     *)
-        if [ "$(pgrep -x compton)" ]; then
+        if [ "$(pgrep -x picom)" ]; then
             echo "%{F#42c962}  %{F-}"
 
             #If Compton is running and CSGO is running kill compton

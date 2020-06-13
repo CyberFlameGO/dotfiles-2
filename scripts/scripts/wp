@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #Set keyboard color
-sudo g810-led -p /etc/g810-led/samples/all_blue_fxl_breathing_red
+g810-led -p /etc/g810-led/samples/all_blue_fxl_breathing_red
 
-if (( $(date +%H) > 16 ));
-then
-	$HOME/scripts/darkmode.sh & > /dev/null
-else
-	$HOME/scripts/lightmode.sh & > /dev/null
-fi
+#if (( $(date +%H) > 16 ));
+#then
+#	$HOME/scripts/darkmode.sh & > /dev/null
+#else
+#	$HOME/scripts/lightmode.sh & > /dev/null
+#fi
 
 #Set wallpaper with feh
 #feh --bg-fill ~/.config/wp
